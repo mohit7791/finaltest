@@ -8,9 +8,9 @@ const App = function () {
 	useEffect(() => {
 		axios
 			.get("/api/users")
-			.then((users) => setUsers(users))
+			.then((users) => setUsers(users.data))
 			.catch((err) => console.log(err));
-	}, []);
+	});
 
 	function submitForm() {
 		if (username === "") {
@@ -23,7 +23,7 @@ const App = function () {
 		}
 		axios
 			.post("/api/users", {
-				username: username,
+				name: username,
 				email: email,
 			})
 			.then(function () {
