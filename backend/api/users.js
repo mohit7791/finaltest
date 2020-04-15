@@ -9,7 +9,6 @@ router.get('/', (req, res) => {
         .catch(err => console.log(err))
 })
 router.post('/', (req, res) => {
-    console.log(req.body);
     const { name, email } = req.body;
     const newUser = new User({
         name: name, email: email
