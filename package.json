@@ -18,7 +18,8 @@
   "scripts": {
     "build": "react-scripts build",
     "start": "node backend/server.js",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install  && npm run build"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install  && npm run build",
+    "heroku config":"set NODE_MODULES_CACHE=false"
   },
   "engines": {
     "node": "12.16.1"
